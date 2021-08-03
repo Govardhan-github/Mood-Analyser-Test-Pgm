@@ -8,9 +8,9 @@ public class MoodAnalyserTest {
     @Test
     public void givenMessage_IAmInSadMoodMessage_ShouldReturnSad(){
         //Defining moodAnalyser Object
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I Am In Sad Mood");
         //Calling AnalyseMood Method And Giving Input Message
-        String   mood = moodAnalyser.analyseMood("I Am In Sad Mood");
+        String   mood = moodAnalyser.analyseMood();
         //Asserting The Result As Boolean Type True Or False
         Assertions.assertEquals(mood, "SAD");
     }
@@ -19,9 +19,9 @@ public class MoodAnalyserTest {
     @Test
     public void givenMessage_IAmInAnyMoodMessage_ShouldReturnHappy(){
         //Defining moodAnalyser Object
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I Am In Any Mood");
         //Calling AnalyseMood Method And Giving Input Message
-        String   mood = moodAnalyser.analyseMood("I Am In Any Mood");
+        String   mood = moodAnalyser.analyseMood();
         //Asserting The Result As Boolean Type True Or False
         Assertions.assertEquals(mood, "HAPPY");
     }
