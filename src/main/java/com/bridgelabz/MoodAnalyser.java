@@ -12,10 +12,16 @@ public class MoodAnalyser {
     }
     //Declaring analyseMood Method
     public String analyseMood() {
-        //If Condition To Check Message Contains Sad Print Sad
-        if(this.message.contains("Sad"))
+        //Try Catch Block For Exception Handling
+        try {
+            //If Condition To Check Message Contains Sad Print Sad
+            if (this.message.contains("Sad"))
+                return "SAD";
+            else//Else Print Happy
+                return "HAPPY";
+            //Executing The NullPointerException
+        } catch (NullPointerException ex) {
             return "SAD";
-        else//Else Print Happy
-            return "HAPPY";
+        }
     }
 }
