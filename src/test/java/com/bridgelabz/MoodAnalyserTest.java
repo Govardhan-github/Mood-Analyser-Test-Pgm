@@ -14,4 +14,14 @@ public class MoodAnalyserTest {
         //Asserting The Result As Boolean Type True Or False
         Assertions.assertEquals(mood, "SAD");
     }
+    //Test To Given Message Any Mood Should Return Happy
+    @Test
+    public void givenMessage_IAmInAnyMoodMessage_ShouldReturnHappy(){
+        //Defining moodAnalyser Object
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I Am In Any Mood");
+        //Calling AnalyseMood Method And Giving Input Message
+        String   mood = moodAnalyser.analyseMood();
+        //Asserting The Result As Boolean Type True Or False
+        Assertions.assertEquals(mood, "HAPPY");
+    }
 }
